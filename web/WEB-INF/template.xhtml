@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <head jsf:id="head">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!--<link rel="stylesheet" href="aqui va el numeral {request.contextPath}/resources/css/estilos.css"/>-->
+        <title>Cliente</title>
+    </head>
+
+    <body jsf:id="body">
+        
+        <nav class="MainMenu">
+            <ul class="MainMenu-List">
+                <li class="MainMenu-item"><a jsf:outcome="index.xhtml">Home </a></li>
+                <li class="MainMenu-item"><a href="List.xhtml">Lista </a></li>
+                <li class="MainMenu-item"><a jsf:outcome="CreateCliente.xhtml">Registrar Cliente </a></li>
+                <li class="MainMenu-item"><a jsf:outcome="CreateDocumento.xhtml">Registrar Documento </a></li>
+                <li class="MainMenu-item"><a jsf:outcome="CreateGenero.xhtml">Registrar Genero </a></li>
+
+                
+            </ul>
+            
+            
+        </nav>
+        
+        
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+        
+        
+        <footer>
+            
+            
+        </footer>
+
+        
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body jsf:id="body">
+
+        <ui:composition template="./WEB-INF/template.xhtml">
+        <!--<link rel="stylesheet" href="aqui va el numeral{request.contextPath}/resources/css/estilos.css"/>-->
+
+            <ui:define name="content">
+                <div>
+                    <form jsf:id="Form">
+   
+                        <input type="number"
+                               placeholder="id Cliente"
+                               jsf:value="#{clienteController.selectedCliente.idcliente}"/>
+                        
+                        
+                     
+          
+                        
+                    <!-- Selects para traer de la base de datos
+                    
+                    <label for="Documento"/>
+                        
+                        <selectOneMenu id="Documento"
+                                       value="{generoController.selectedGenero.setIdGenero(idGenero)}"
+                                     required="true">
+                            <f:selectItems value="{generoController.selectedGenero.nombreGenero}"/>
+                    </selectOneMenu>-->
+                    
+                     <!-- <selectOneMenu id="Genero"
+                                       value="{generoController.selectedGenero.setIdGenero(idGenero)}"
+                                     required="true">
+                            <f:selectItems value="{generoController.selectedGenero.nombreGenero}"/>
+                    </selectOneMenu>-->
+                        
+                        <input type="number"
+                               placeholder="Numero Documento"
+                               jsf:value="#{clienteController.selectedCliente.numeroDocumento}"/>
+                        
+                        <input type="text"
+                               placeholder="Nombre"
+                               jsf:value="#{clienteController.selectedCliente.nombres}"/>
+                        
+                        <input type="text"
+                               placeholder="Apellidos"
+                               jsf:value="#{clienteController.selectedCliente.apellidos}"/>
+                        
+                        <input type="number"
+                               placeholder="Telefono Celular"
+                               jsf:value="#{clienteController.selectedCliente.telefonoCelular}"/>
+                        
+                        <input type="date"
+                               placeholder="fecha de Nacimiento"
+                               jsf:value="#{clienteController.selectedCliente.fechaNacimiento}">
+                               <f:convertDateTime pattern="yyyy-mm-dd"></f:convertDateTime>
+                        </input>
+                        
+                        <input type="text"
+                               placeholder="Direccion"
+                               jsf:value="#{clienteController.selectedCliente.direccion}"/>
+                        
+                        <input type="email"
+                               placeholder="Email"
+                               jsf:value="#{clienteController.selectedCliente.email}"/>
+                        
+                        <label for="Genero"/>
+                        
+                      
+                        
+                        <select jsf:value="#{clienteController.selectedCliente.estado}" size="1">
+                        <f:selectItem itemLabel="Estado"/>
+                        <f:selectItem itemLabel="Activo" itemValue="0"/>
+                        <f:selectItem itemLabel="Inactivo" itemValue="1"/>
+                        </select>
+                        
+                        
+                        
+       
+                        <button typr="submit"
+                                jsf:actionListener="#{clienteController.create()}"
+                                >
+                            GUARDAR
+                        </button>
+                    </form>
+                </div>
+                
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
